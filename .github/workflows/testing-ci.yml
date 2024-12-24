@@ -13,6 +13,9 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.8
+    - name: Install dependencies
+      run: |
+        make install
     - name: Lint with pylint
       run: |
         make lint
@@ -22,5 +25,5 @@ jobs:
     - name: Format code
       run: |
         make format
-  
+    
     
